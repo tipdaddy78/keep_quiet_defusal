@@ -1,5 +1,4 @@
-import sys
-from modules import *
+from defusal.modules import *
 
 
 def defuse():
