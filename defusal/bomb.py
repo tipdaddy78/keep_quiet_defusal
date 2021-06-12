@@ -8,6 +8,7 @@ from modules.morse import *
 from modules.comp_wires import *
 from modules.wire_sequence import *
 from modules.password import *
+from modules.maze import *
 
 class Bomb:
     def __init__(self):
@@ -143,6 +144,9 @@ class Bomb:
             if m == "password":
                 found_module = True
                 solve_password()
+            if m == "maze":
+                found_module = True
+                solve_maze()
             if m == "defused":
                 found_module = True
                 continue
@@ -150,7 +154,7 @@ class Bomb:
                 print("I didn't recognize that module")
         print("Congratulations on defusing the bomb!")
         while 1:
-            i = input("Would you like to restart? y/n")
+            i = input("Would you like to restart? y/n\n")
             if i != "y" and i != "n":
                 print("Invalid entry. Please enter y or n")
                 continue
@@ -175,6 +179,7 @@ class Bomb:
         print("\t \"morse\" for the Morse Code module")
         print("\t \"complicated\" for the Complicated Wires module")
         print("\t \"sequence\" for the Wire Sequence module")
+        print("\t \"maze\" for the Maze module")
         print("\t \"strike\" If you caused a strike")
         print("or \t \"defused\" if the bomb is now defused.\n")
 
